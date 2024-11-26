@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <div id="overlaySelector" style="background-color: rgba(0, 0, 0, 0.8);" class="absolute hidden flex-col w-screen h-screen justify-center items-center">
+    <h2 class="text-white mb-8">Select your country</h2>
+    <div class="flex flex-wrap w-4/5 max-w-[600px] gap-2">
+      <button class="bg-white text-black text-xl w-[calc(50%-2rem)]" onclick="setCountry('argentina')">Argentina</button>
+      <button class="bg-white text-black text-xl w-[calc(50%-2rem)]" onclick="setCountry('uruguay')">Uruguay</button>
+      <button class="bg-white text-black text-xl w-[calc(50%-2rem)]" onclick="setCountry('mexico')">México</button>
+      <button class="bg-white text-black text-xl w-[calc(50%-2rem)]" onclick="setCountry('colombia')">Colombia</button>
+    </div>
+  </div>
+  <div id="modalImages" onclick="closeModal(event)" style="background-color: rgba(0, 0, 0, 0.8);" class="absolute hidden w-screen h-screen justify-center items-center cursor-pointer">
+    <div class="w-4/5 max-w-[1000px] flex cursor-default justify-center items-center"></div>
+  </div>
+  <iframe id="Flipbook" class="w-screen h-screen" src="https://viewer.ipaper.io/acg-demo/test/test-paises/?HideNavigationBars=true&HideStandardUI=true"></iframe>
+
+  <script src='https://cdn.ipaper.io/flipbooks/api/v3/latest.js'></script>
+  <script src="script.js"></script>
+</body>
+</html>
